@@ -14,6 +14,12 @@
 		A709145C1C207600005C2D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A709145B1C207600005C2D7C /* Assets.xcassets */; };
 		A70914671C207600005C2D7C /* tvplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70914661C207600005C2D7C /* tvplayerTests.swift */; };
 		A70914721C207600005C2D7C /* tvplayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70914711C207600005C2D7C /* tvplayerUITests.swift */; };
+		A70914861C2085E0005C2D7C /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70914851C2085E0005C2D7C /* FeaturedCollectionViewCell.swift */; };
+		A70914881C208C70005C2D7C /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70914871C208C70005C2D7C /* MoviesViewController.swift */; };
+		A709148A1C20A76A005C2D7C /* featured-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70914891C20A76A005C2D7C /* featured-0.jpg */; };
+		A709148C1C20A7C7005C2D7C /* featured-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A709148B1C20A7C7005C2D7C /* featured-1.jpg */; };
+		A709148E1C20A808005C2D7C /* featured-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A709148D1C20A808005C2D7C /* featured-2.jpg */; };
+		A70914901C20AF41005C2D7C /* PlaverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A709148F1C20AF41005C2D7C /* PlaverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		A709146D1C207600005C2D7C /* tvplayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tvplayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70914711C207600005C2D7C /* tvplayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvplayerUITests.swift; sourceTree = "<group>"; };
 		A70914731C207600005C2D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70914851C2085E0005C2D7C /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		A70914871C208C70005C2D7C /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		A70914891C20A76A005C2D7C /* featured-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "featured-0.jpg"; path = "../../featured-0.jpg"; sourceTree = "<group>"; };
+		A709148B1C20A7C7005C2D7C /* featured-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "featured-1.jpg"; path = "../../featured-1.jpg"; sourceTree = "<group>"; };
+		A709148D1C20A808005C2D7C /* featured-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "featured-2.jpg"; path = "../../featured-2.jpg"; sourceTree = "<group>"; };
+		A709148F1C20AF41005C2D7C /* PlaverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,18 @@
 		A70914501C2075FF005C2D7C /* tvplayer */ = {
 			isa = PBXGroup;
 			children = (
+				A709148D1C20A808005C2D7C /* featured-2.jpg */,
+				A709148B1C20A7C7005C2D7C /* featured-1.jpg */,
+				A70914891C20A76A005C2D7C /* featured-0.jpg */,
 				A70914511C207600005C2D7C /* AppDelegate.swift */,
 				A70914531C207600005C2D7C /* ViewController.swift */,
 				A70914581C207600005C2D7C /* Main.storyboard */,
 				A709145B1C207600005C2D7C /* Assets.xcassets */,
 				A709145D1C207600005C2D7C /* Info.plist */,
 				A70914551C207600005C2D7C /* tvplayer.xcdatamodeld */,
+				A70914851C2085E0005C2D7C /* FeaturedCollectionViewCell.swift */,
+				A70914871C208C70005C2D7C /* MoviesViewController.swift */,
+				A709148F1C20AF41005C2D7C /* PlaverViewController.swift */,
 			);
 			path = tvplayer;
 			sourceTree = "<group>";
@@ -231,6 +249,9 @@
 			files = (
 				A709145C1C207600005C2D7C /* Assets.xcassets in Resources */,
 				A709145A1C207600005C2D7C /* Main.storyboard in Resources */,
+				A709148A1C20A76A005C2D7C /* featured-0.jpg in Resources */,
+				A709148C1C20A7C7005C2D7C /* featured-1.jpg in Resources */,
+				A709148E1C20A808005C2D7C /* featured-2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70914861C2085E0005C2D7C /* FeaturedCollectionViewCell.swift in Sources */,
+				A70914881C208C70005C2D7C /* MoviesViewController.swift in Sources */,
 				A70914571C207600005C2D7C /* tvplayer.xcdatamodeld in Sources */,
 				A70914541C207600005C2D7C /* ViewController.swift in Sources */,
+				A70914901C20AF41005C2D7C /* PlaverViewController.swift in Sources */,
 				A70914521C207600005C2D7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

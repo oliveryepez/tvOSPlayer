@@ -1,25 +1,167 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="6185.10" systemVersion="14A360a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="NO" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="9mJ-cB-PRZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--TV-->
+        <scene sceneID="9mE-N1-eOh">
+            <objects>
+                <viewController title="TV" id="xfV-KU-AJa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jho-5G-4aw"/>
+                        <viewControllerLayoutGuide type="bottom" id="6vI-Ea-tx2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q9O-Xp-PCt">
+                        <rect key="frame" x="0.0" y="140" width="1920" height="940"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="TV" id="5Ox-Vs-6UM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHZ-wM-4iL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="-1556"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="JtC-Lu-mEf">
+            <objects>
+                <viewController title="Movies" id="xZX-XP-aUu" customClass="MoviesViewController" customModule="tvplayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7RV-Ed-yyB"/>
+                        <viewControllerLayoutGuide type="bottom" id="TjA-dH-5pT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yI6-nw-7t3">
+                        <rect key="frame" x="0.0" y="140" width="1920" height="940"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5w-oY-Xyq">
+                                <rect key="frame" x="-40" y="99" width="1920" height="940"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Irs-2k-gMy">
+                                        <rect key="frame" x="39" y="-97" width="1920" height="388"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1920" id="301-FA-959"/>
+                                            <constraint firstAttribute="height" constant="388" id="z0w-Nx-SyP"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="c5W-ao-lbA">
+                                            <size key="itemSize" width="640" height="480"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="featuredCell" id="Izy-fk-VIc" customClass="FeaturedCollectionViewCell" customModule="tvplayer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J73-7F-XXJ">
+                                                            <rect key="frame" x="8" y="8" width="632" height="480"/>
+                                                            <animations/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="J73-7F-XXJ" firstAttribute="top" secondItem="Izy-fk-VIc" secondAttribute="topMargin" id="H0f-DW-4Zq"/>
+                                                    <constraint firstItem="J73-7F-XXJ" firstAttribute="leading" secondItem="Izy-fk-VIc" secondAttribute="leadingMargin" id="erY-JY-Z62"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="J73-7F-XXJ" secondAttribute="trailing" constant="-8" id="pOI-Rx-wzn"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="J73-7F-XXJ" secondAttribute="bottom" constant="-16" id="r1a-KX-U7h"/>
+                                                </constraints>
+                                                <size key="customSize" width="640" height="480"/>
+                                                <connections>
+                                                    <outlet property="featuredImage" destination="J73-7F-XXJ" id="NSF-JW-rh4"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="xZX-XP-aUu" id="3Zb-br-bHA"/>
+                                            <outlet property="delegate" destination="xZX-XP-aUu" id="bKU-F2-CVc"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Irs-2k-gMy" secondAttribute="trailing" constant="-39" id="PTE-TU-bH6"/>
+                                    <constraint firstItem="Irs-2k-gMy" firstAttribute="leading" secondItem="H5w-oY-Xyq" secondAttribute="leading" constant="39" id="R9t-fJ-99H"/>
+                                    <constraint firstItem="Irs-2k-gMy" firstAttribute="top" secondItem="H5w-oY-Xyq" secondAttribute="top" constant="-97" id="VQi-7d-YMU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Irs-2k-gMy" secondAttribute="bottom" constant="649" id="sT1-Lz-paB"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="H5w-oY-Xyq" secondAttribute="bottom" constant="-99" id="9H7-NQ-nMX"/>
+                            <constraint firstItem="H5w-oY-Xyq" firstAttribute="top" secondItem="7RV-Ed-yyB" secondAttribute="bottom" constant="99" id="I7y-0C-STO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H5w-oY-Xyq" secondAttribute="trailing" constant="20" id="UEu-ir-cjp"/>
+                            <constraint firstItem="H5w-oY-Xyq" firstAttribute="leading" secondItem="yI6-nw-7t3" secondAttribute="leadingMargin" constant="-60" id="t9A-Op-Qoi"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Movies" id="1CV-9a-tja"/>
+                    <connections>
+                        <outlet property="collectionViewOutlet" destination="Irs-2k-gMy" id="L1H-Am-RRr"/>
+                        <outlet property="scrollView" destination="H5w-oY-Xyq" id="h5g-Te-dwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDF-7J-iUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-309"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QAl-Lx-GdR">
+            <objects>
+                <tabBarController id="9mJ-cB-PRZ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="AsJ-ge-y7o">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="140"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xZX-XP-aUu" kind="relationship" relationship="viewControllers" id="Cj5-Bw-Utq"/>
+                        <segue destination="xfV-KU-AJa" kind="relationship" relationship="viewControllers" id="2zA-fH-ojD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w64-ex-nRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2305" y="-1068"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="hIh-yd-vxo">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="Qts-m3-XDU" customClass="PlayerViewController" customModule="tvplayer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYp-F7-sEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2307" y="1055"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tvplayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="19" y="1074"/>
         </scene>
     </scenes>
 </document>
